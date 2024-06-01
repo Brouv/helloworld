@@ -64,10 +64,21 @@ public class Main {
          var separationOfWeightsBoxers = boxer2 % boxer1 ;
          System.out.println(separationOfWeightsBoxers + " kg");
 
-//                   task#8
+//                   task#8/1
 
+         var allTimesWork = 640;
+         System.out.println(allTimesWork + " часов");
+         var workTime = 8;
+         System.out.println(workTime + " часов");
+         var numberOfWorkers = allTimesWork / workTime;
+         System.out.println("Всего работников в компании - " + numberOfWorkers + " человек");
 
+//                      task#8/2
 
+         var sumWorkers = numberOfWorkers + 94;
+         System.out.println(sumWorkers + " человек");
+         var workTime2 = allTimesWork / sumWorkers;
+         System.out.println("Если в компании работает " + sumWorkers + " то всего " + workTime2 + " часов работы может быть поделено между работниками.");
 
     }
 }
