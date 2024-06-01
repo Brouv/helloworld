@@ -55,14 +55,18 @@ public class Main {
          var boxer2 = 82.7;
          System.out.println(boxer2 + " kg");
          var totalWeight = boxer1 + boxer2;
-         System.out.println(totalWeight + "kg");
+         System.out.println(totalWeight + " kg");
          var difference = boxer2 - boxer1;
          System.out.println("Разница между двумя боксёрами составляет " + difference + " kg");
 
 //                   task#7
 
-         var separationOfWeightsBoxers = boxer1 % boxer2;
-         System.out.println(separationOfWeightsBoxers);
+         var separationOfWeightsBoxers = boxer2 % boxer1 ;
+         System.out.println(separationOfWeightsBoxers + " kg");
+
+//                   task#8
+
+
 
 
     }
