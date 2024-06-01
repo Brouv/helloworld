@@ -78,7 +78,7 @@ public class Main {
          var sumWorkers = numberOfWorkers + 94;
          System.out.println(sumWorkers + " человек");
          var workTime2 = allTimesWork / sumWorkers;
-         System.out.println("Если в компании работает " + sumWorkers + " то всего " + workTime2 + " часов работы может быть поделено между работниками.");
+         System.out.println("Если в компании работает " + sumWorkers + " человека,то всего " + workTime2 + " часа работы может быть поделено между работниками.");
 
     }
 }
