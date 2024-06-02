@@ -156,9 +156,9 @@ public class Main {
          System.out.println("В этом году, Денис получит " + maneyNewD);
          int maneyNewK = kristinaNewYear * monthInYear;
          System.out.println("В этом году, Кристина получит " + maneyNewK);
-         int diffManeyInYearsM = maneyNewM % maneyOldM;
-         int diffManeyInYearsD = maneyNewD % maneyOldD;
-         int diffManeyInYearsK = maneyNewK % maneyOldK;
+         int diffManeyInYearsM = maneyNewM - maneyOldM;
+         int diffManeyInYearsD = maneyNewD - maneyOldD;
+         int diffManeyInYearsK = maneyNewK - maneyOldK;
          System.out.println("Маша теперь получает " + mashaNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsM + " руб.");
          System.out.println("Денис теперь получает " + denisNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsD + " руб.");
          System.out.println("Кристина теперь получает " + kristinaNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsK + " руб.");
