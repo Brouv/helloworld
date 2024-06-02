@@ -67,5 +67,100 @@ public class Main {
          int bottelsProduction31D = bottelsProduction1D * 31;
          System.out.println("За " + timesForProduction1 + " месяц машина произвела " + bottelsProduction31D + " штук бутылок");
 
+//                   task#5
+
+         byte havePots = 120;
+         System.out.println(havePots);
+         byte exepensesOneClassW = 2;
+         System.out.println(exepensesOneClassW);
+         byte exepensesOneClassBr = 4;
+         System.out.println(exepensesOneClassBr);
+         int exepensesOneClass = exepensesOneClassW + exepensesOneClassBr;
+         System.out.println("Всего на 1 класс уходит " + exepensesOneClass + " банок");
+         int haveClass = havePots / exepensesOneClass;
+         int needPotsW = exepensesOneClassW * haveClass;
+         int needPotsBr = exepensesOneClassBr * haveClass;
+         System.out.println("В школе, где " + haveClass + " классов, нужно " + needPotsW + " банок белой краски и " + needPotsBr + " банок коричневой краски.");
+
+//                  task#6
+
+         byte banana = 5;
+         System.out.println("Всего " + banana + " бананов в коктейль");
+         int weightBanana = banana * 80;
+         System.out.println("Всего вес бананов в коктейле " + weightBanana + " гр.");
+         short milk = 200;
+         System.out.println("Налить " + milk + " мл.");
+         int weightMilk = milk / 100 * 105;
+         System.out.println("Масса молока в коктейле равна " + weightMilk + " гр.");
+         byte iceCream = 2;
+         System.out.println("Добавить " + iceCream + " мороженного в коктейль");
+         int weightIceCream = iceCream * 100;
+         System.out.println("Масса мороженного в коктейле, составит " + weightIceCream + " гр.");
+         byte egg = 4;
+         int weightEgg = egg * 70;
+         System.out.println("Так же добавьте " + egg + " яйца. Суммарная масса которых в коктейле равна " + weightEgg + " гр.");
+         int allWeightGr = weightBanana + weightMilk + weightIceCream + weightEgg;
+         float allWeightKg = (float)allWeightGr / 1000;
+         System.out.println("Масса такого спортзавтрака в граммах равна " + allWeightGr);
+         System.out.println("Масса в килограммах равна " + allWeightKg);
+
+//                   task#7
+
+         byte needDawnKg = 7;
+         System.out.println("Нужно сбросить " + needDawnKg + " кг.");
+         short needDawnGrMin = 250;
+         System.out.println("Минимум " + needDawnGrMin + " гр. в день");
+         short needDawnGrMax = 500;
+         System.out.println("Максимум " + needDawnGrMax + " гр. в день");
+         short oneKg = 1000;
+         System.out.println("1 кг = " + oneKg + " гр.");
+         int kgInGr = needDawnKg * oneKg;
+         System.out.println("Всего нужно сбросить в граммах - " + kgInGr);
+         int daysMin = kgInGr / needDawnGrMin;
+         System.out.println("Кол-во дней, при минимальном сбросе веса, получится - " + daysMin);
+         int daysMax = kgInGr / needDawnGrMax;
+         System.out.println("Кол-во дней, при максимальном сбросе веса, получается - " + daysMax);
+         int mediumDays = (daysMax + daysMin) / 2;
+         System.out.println("Среднее кол-во дней, чтобы добиться результата похудения - " + mediumDays);
+
+//                      task#8
+
+         int masha = 67760;
+         System.out.println("Старая з/п Маши " + masha + " руб.");
+         int denis = 83690;
+         System.out.println("Старая з/п Дениса " + denis + " руб.");
+         int kristina = 76230;
+         System.out.println("Старая з/п Кристины " + kristina + " руб.");
+         byte monthInYear = 12;
+         int maneyOldM = masha * monthInYear;
+         System.out.println("Маша за прошлый год получала " + maneyOldM + " руб.");
+         int maneyOldD = denis * monthInYear;
+         System.out.println("Денис за прошлый год получил " + maneyOldD + " руб.");
+         int maneyOldK = kristina * monthInYear;
+         System.out.println("Кристина за прошлый год получила " + maneyOldK + " руб.");
+         int procent10M = masha / 100 * 10;
+         System.out.println("10 процентов от зарплаты Маши - " + procent10M);
+         int procent10D = denis / 100 * 10;
+         System.out.println("10 процентов от зарплаты Дениса - " + procent10D);
+         int procent10K = kristina / 100 * 10;
+         System.out.println("10 процентов от зарплаты Кристины - " + procent10K);
+         int mashaNewYear = masha + procent10M;
+         System.out.println("Новая з/п с надбавкой у Маши " + mashaNewYear);
+         int denisNewYear = denis + procent10D;
+         System.out.println("Новая з/п с надбавкой у Дениса " + denisNewYear);
+         int kristinaNewYear = kristina + procent10K;
+         System.out.println("Новая з/п с надбавкой у Кристины " + kristinaNewYear);
+         int maneyNewM = mashaNewYear * monthInYear;
+         System.out.println("В этом году, Маша получит " + maneyNewM);
+         int maneyNewD = denisNewYear * monthInYear;
+         System.out.println("В этом году, Денис получит " + maneyNewD);
+         int maneyNewK = kristinaNewYear * monthInYear;
+         System.out.println("В этом году, Кристина получит " + maneyNewK);
+         int diffManeyInYearsM = maneyNewM % maneyOldM;
+         int diffManeyInYearsD = maneyNewD % maneyOldD;
+         int diffManeyInYearsK = maneyNewK % maneyOldK;
+         System.out.println("Маша теперь получает " + mashaNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsM + " руб.");
+         System.out.println("Денис теперь получает " + denisNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsD + " руб.");
+         System.out.println("Кристина теперь получает " + kristinaNewYear + " рублей. Годовой доход вырос на " + diffManeyInYearsK + " руб.");
     }
 }
