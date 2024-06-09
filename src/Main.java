@@ -64,12 +64,9 @@ public class Main {
         int capacity = 102;
         int seats = 60;
         int standingPlaces = capacity - seats;
-        int people = 90;
+        int people = 1;
         int remainsSeats = seats - people;
         //System.out.println(remainsSeats);
-        if (people == 0) {
-            System.out.println("Если, в вагон заходят " + people + " людей, вагон свободен. Сидячих мест = " + seats + ", а стоячих = " + standingPlaces + ".");
-        }
         if (people < seats) {
             System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats + " а стоячих останется " + standingPlaces + ".");
         }
@@ -82,9 +79,25 @@ public class Main {
                 int remainsSeats2 = remainsSeats + remainsSeats1;
                 //System.out.println(remainsSeats2);
                 System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats2 + " а стоячих останется " + remainsStandingPlaces + ".");
-            }else {
+            } else {
                 System.out.println("Если, в вагон заходять больше " + capacity + " человек, кому-то придётся остаться на остановке.");
             }
+        }
+
+        //                 task#7
+
+        int one = 6;
+        int two = 2;
+        int three = 5;
+        if(one == two && one == three) {
+            System.out.println(" 1-ое число " + one + " равен 2-ому числу " + two + " и 3-ему числу " + three + " .");
+        }else if (two >= one && two >= three){
+            System.out.println("2-ое число " + two + " больше 1-ого числа " + one + " и 3-его числа " + three + " .");
+        }else if (one>= two && one >= three) {
+            System.out.println("1-ое число " + one + " больше 2-ого числа " + two + " и 3-его числа " + three + " .");
+        }else {
+            System.out.println("3-е число " + three + " больше 2-ого числа " + two + " и 1-ого числа " + one + " .");
+
         }
     }
 }
