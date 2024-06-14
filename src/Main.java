@@ -42,7 +42,7 @@ public class Main {
         if (age1 >= 18 && age1 <= 24) {
             System.out.println("если возраст человека равен " + age1 + ", то ему нужно ходить в университет.");
         }
-        else  {
+        if (age1 > 24){
             System.out.println("если возраст человека равен " + age1 + ", то ему нужно ходить на работу.");
         }
 
@@ -64,9 +64,8 @@ public class Main {
         int capacity = 102;
         int seats = 60;
         int standingPlaces = capacity - seats;
-        int people = 1;
+        int people = 0;
         int remainsSeats = seats - people;
-        //System.out.println(remainsSeats);
         if (people < seats) {
             System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats + " а стоячих останется " + standingPlaces + ".");
         }
@@ -74,13 +73,10 @@ public class Main {
             int remainsStandingPlaces = standingPlaces + remainsSeats;
             if (remainsStandingPlaces >= 0) {
                 int remainsSeats1 = remainsSeats * (-1);
-                //System.out.println(remainsStandingPlaces);
-                //System.out.println( remainsSeats1);
                 int remainsSeats2 = remainsSeats + remainsSeats1;
-                //System.out.println(remainsSeats2);
                 System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats2 + " а стоячих останется " + remainsStandingPlaces + ".");
             } else {
-                System.out.println("Если, в вагон заходять больше " + capacity + " человек, кому-то придётся остаться на остановке.");
+                System.out.println("Если, в вагон заходят больше " + capacity + " человек, кому-то придётся остаться на остановке.");
             }
         }
 
