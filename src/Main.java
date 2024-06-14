@@ -64,7 +64,7 @@ public class Main {
         int capacity = 102;
         int seats = 60;
         int standingPlaces = capacity - seats;
-        int people = 0;
+        int people = 61;
         int remainsSeats = seats - people;
         if (people < seats) {
             System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats + " а стоячих останется " + standingPlaces + ".");
@@ -72,7 +72,7 @@ public class Main {
         if (remainsSeats <= 0) {
             int remainsStandingPlaces = standingPlaces + remainsSeats;
             if (remainsStandingPlaces >= 0) {
-                int remainsSeats1 = remainsSeats * (-1);
+                int remainsSeats1 = Math.abs(remainsSeats);
                 int remainsSeats2 = remainsSeats + remainsSeats1;
                 System.out.println("Если, в вагон заходят " + people + " людей, в этот момент сидячих мест будет " + remainsSeats2 + " а стоячих останется " + remainsStandingPlaces + ".");
             } else {
