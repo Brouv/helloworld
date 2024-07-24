@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        // task1
+        // task#1
 
         byte clientOS = 1;
         if (clientOS == 0) {
@@ -10,7 +10,7 @@ public class Main {
             System.out.println("Установите версию для Android по ссылке.");
         }
 
-        // task2
+        // task#2
 
         byte clientOS1 = 0;
         int clientDeviceYear = 2014;
@@ -25,7 +25,7 @@ public class Main {
             System.out.println("Установите версию для Android по ссылке.");
         }
 
-        //task3
+        //task#3
 
         int year = 1704;
         if ((year >= 1584) && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
@@ -34,7 +34,7 @@ public class Main {
             System.out.println("Этот " + year + " год не является високосным.");
         }
 
-        //task 4
+        //task#4
 
         int deliveryDistance = 47;
         if (deliveryDistance < 20) {
@@ -50,7 +50,7 @@ public class Main {
             System.out.println("Доставки, на такое расстояние, не осущевляются.");
         }
 
-        //task5
+        //task#5
 
         int monthNumber = 12;
         switch (monthNumber) {
