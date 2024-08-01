@@ -59,7 +59,7 @@ public class Main {
         for (int i = 1; i <= 12; i++) {
             total1 = total1 + total1/100;
             total1 = total1 + money1;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total1 + " рублей. ");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total1 + " рублей.");
         }
 
         // task #10
