@@ -1,81 +1,94 @@
 public class Main {
     public static void main(String[] args) {
 
-        // task1
+        // task #1
 
-        byte clientOS = 1;
-        if (clientOS == 0) {
-            System.out.println("Установите версию для iOS по ссылке.");
-        } else {
-            System.out.println("Установите версию для Android по ссылке.");
+        int money = 15000;
+        int total = 0;
+        int i = 0;
+        while (total < 2_459_000) {
+            total = total + money;
+            i++;
+        }
+        System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей.");
+
+        // task #2
+
+        int a = 0;
+        while (a < 10) {
+            a++;
+            System.out.print(a);
+        }
+        System.out.println();
+        for (int b = 10; b > 0; b--) {
+            System.out.print(b);
+        }
+        System.out.println();
+
+        // task #3
+
+        int countryPopulation = 12_000_000;
+        int birthRate = countryPopulation / 1000 * 17;
+        int deathRate = countryPopulation / 1000 * 8;
+        int c = 0;
+        while (c < 10) {
+            c++;
+            countryPopulation = countryPopulation + birthRate - deathRate;
+            System.out.println("Год " + c + " численность населения составляет " + countryPopulation + ".");
         }
 
-        // task2
+        // task #4
 
-        byte clientOS1 = 0;
-        int clientDeviceYear = 2014;
-        if (clientOS1 == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-        } else if (clientOS1 == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-        }
-        if (clientOS1 == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию для iOS по ссылке.");
-        } else if (clientOS1 == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию для Android по ссылке.");
+        int contribution = 15000;
+        int d = 0;
+        while (contribution < 12_000_000) {
+            int percent = contribution / 100 * 7;
+            contribution = contribution + percent;
+            d++;
+            System.out.println("Месяц " + d + ", сумма по вкладу = " + contribution + " рублей.");
         }
 
-        //task3
+        // task #5
 
-        int year = 1704;
-        if ((year >= 1584) && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
-            System.out.println("Этот " + year + " год является високосным.");
-        } else {
-            System.out.println("Этот " + year + " год не является високосным.");
+        int contribution1 = 15000;
+        int d1 = 0;
+        while (contribution1 < 12_000_000) {
+            int percent1 = contribution1 / 100 * 7;
+            contribution1 = contribution1 + percent1;
+            d1++;
+            if (d1 % 6 == 0) {
+                System.out.println("Месяц " + d1 + ", сумма по вкладу = " + contribution1 + " рублей.");
+            }
         }
 
-        //task 4
+        // task #6
 
-        int deliveryDistance = 47;
-        if (deliveryDistance < 20) {
-            int deliveryDay = 1;
-            System.out.println("Потребуется дней: " + deliveryDay);
-        } else if (deliveryDistance >= 20 && deliveryDistance <= 60){
-            int deliveryDay = 2;
-            System.out.println("Потребуется дней: " + deliveryDay);
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100){
-            int deliveryday = 3;
-            System.out.println("Потребуется дней: " + deliveryday);
-        }else {
-            System.out.println("Доставки, на такое расстояние, не осущевляются.");
+        int contribution2 = 15000;
+        int d2 = 0;
+        while (d2 < 108) {
+            int percent2 = contribution2 / 100 * 7;
+            contribution2 = contribution2 + percent2;
+            d2++;
+            if (d2 % 6 == 0){
+            System.out.println("Месяц " + d2 + ", сумма по вкладу = " + contribution2 + " рублей.");
+            }
         }
 
-        //task5
+            // task #7
 
-        int monthNumber = 12;
-        switch (monthNumber) {
-            case 1:
-            case 2:
-            case 12:
-                System.out.println("Сейчас зима.");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Сейчас весна.");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Сейчас лето.");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Сейчас осень.");
-                break;
-            default:
-                System.out.println("Такого месяца не существует.");
+        int friday = 5;
+        for (int currentFriday = friday; currentFriday < 31; currentFriday +=7){
+            System.out.println("Сегодня пятница, " + currentFriday + "-е число. Необходимо подготовить отчёт.");
+        }
+
+            // task #8
+        int year = 2024;
+        int startYear = year - 200;
+        int stopYear = year + 100;
+        for (int e = startYear; e < stopYear; ++e){
+           if (e % 79 == 0){
+            System.out.println(e);
+            }
         }
     }
 }
