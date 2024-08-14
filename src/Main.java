@@ -1,94 +1,65 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
-        // task #1
+        //task #1
 
-        int money = 15000;
-        int total = 0;
-        int i = 0;
-        while (total < 2_459_000) {
-            total = total + money;
-            i++;
-        }
-        System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей.");
+        int[] abr = new int[3];
+        abr[0] = 1;
+        abr[1] = 2;
+        abr[2] = 3;
 
-        // task #2
+        double[] bvc = {1.57, 7.654, 9.986};
 
-        int a = 0;
-        while (a < 10) {
-            a++;
-            System.out.print(a);
+        int[] bor = {1, 3, 4, 16, 17, 20};
+
+        //task #2
+
+        System.out.println(Arrays.toString(abr));
+
+        System.out.println(Arrays.toString(bvc));
+
+        System.out.println(Arrays.toString(bor));
+
+        //task #3
+
+        for (int a = abr.length - 1; a >= 0; a--) {
+            if (a != 0) {
+                System.out.print(abr[a] + ", ");
+            } else {
+                System.out.print(abr[a]);
+            }
         }
         System.out.println();
-        for (int b = 10; b > 0; b--) {
-            System.out.print(b);
+
+        for (int b = bvc.length - 1; b >= 0; b--) {
+            if (b != 0) {
+                System.out.print(bvc[b] + ", ");
+            } else {
+                System.out.print(bvc[b]);
+            }
         }
         System.out.println();
 
-        // task #3
-
-        int countryPopulation = 12_000_000;
-        int birthRate = countryPopulation / 1000 * 17;
-        int deathRate = countryPopulation / 1000 * 8;
-        int c = 0;
-        while (c < 10) {
-            c++;
-            countryPopulation = countryPopulation + birthRate - deathRate;
-            System.out.println("Год " + c + " численность населения составляет " + countryPopulation + ".");
-        }
-
-        // task #4
-
-        int contribution = 15000;
-        int d = 0;
-        while (contribution < 12_000_000) {
-            int percent = contribution / 100 * 7;
-            contribution = contribution + percent;
-            d++;
-            System.out.println("Месяц " + d + ", сумма по вкладу = " + contribution + " рублей.");
-        }
-
-        // task #5
-
-        int contribution1 = 15000;
-        int d1 = 0;
-        while (contribution1 < 12_000_000) {
-            int percent1 = contribution1 / 100 * 7;
-            contribution1 = contribution1 + percent1;
-            d1++;
-            if (d1 % 6 == 0) {
-                System.out.println("Месяц " + d1 + ", сумма по вкладу = " + contribution1 + " рублей.");
+        for (int c = bor.length - 1; c >= 0; c--) {
+            if (c != 0) {
+                System.out.print(bor[c] + ", ");
+            } else {
+                System.out.println(bor[c]);
             }
         }
 
-        // task #6
+                        //task #4
 
-        int contribution2 = 15000;
-        int d2 = 0;
-        while (d2 < 108) {
-            int percent2 = contribution2 / 100 * 7;
-            contribution2 = contribution2 + percent2;
-            d2++;
-            if (d2 % 6 == 0){
-            System.out.println("Месяц " + d2 + ", сумма по вкладу = " + contribution2 + " рублей.");
+        for (int i = 0; i < abr.length; i++){
+            if (abr[i] % 2 !=0) {
+                abr[i]++;
             }
-        }
-
-            // task #7
-
-        int friday = 5;
-        for (int currentFriday = friday; currentFriday < 31; currentFriday +=7){
-            System.out.println("Сегодня пятница, " + currentFriday + "-е число. Необходимо подготовить отчёт.");
-        }
-
-            // task #8
-        int year = 2024;
-        int startYear = year - 200;
-        int stopYear = year + 100;
-        for (int e = startYear; e < stopYear; ++e){
-           if (e % 79 == 0){
-            System.out.println(e);
+            if(i > 0){
+                System.out.print(", ");
             }
+            System.out.print(abr[i]);
         }
     }
 }
