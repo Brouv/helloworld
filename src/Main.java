@@ -9,19 +9,19 @@ public class Main {
         while (total < 2_459_000) {
             total = total + money;
             i++;
+            System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей.");
         }
-        System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей.");
 
         // task #2
 
-        int a = 0;
-        while (a < 10) {
-            a++;
-            System.out.print(a);
+        int num = 1;
+        while (num <= 10) {
+            System.out.print(num + " ");
+            num++;
         }
         System.out.println();
-        for (int b = 10; b > 0; b--) {
-            System.out.print(b);
+        for (num = 10; num > 0; num--) {
+            System.out.print(num + " ");
         }
         System.out.println();
 
