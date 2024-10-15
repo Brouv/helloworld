@@ -24,7 +24,7 @@ public class Main {
         }
        System.out.println("Минимальная сумма трат за неделю составила " + minCost + " рублей.");
 
-        int maxCost = -1;
+        int maxCost = 0;
         for (final int current : cost) {
             if (current > maxCost) {
                 maxCost = current;
@@ -39,7 +39,7 @@ public class Main {
     for (int element : midCost){
         sumMonth = sumMonth + element;
     }
-        float midSum = sumMonth / 5.0f;
+        float midSum = sumMonth / midCost.length;
         System.out.println("Средняя сумма трат за месяц составила " + midSum + " рублей");
 
             //task #4
