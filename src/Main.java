@@ -24,7 +24,7 @@ public class Main {
         }
        System.out.println("Минимальная сумма трат за неделю составила " + minCost + " рублей.");
 
-        int maxCost = -1;
+        int maxCost = 0;
         for (final int current : cost) {
             if (current > maxCost) {
                 maxCost = current;
