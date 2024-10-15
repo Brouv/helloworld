@@ -16,7 +16,7 @@ public class Main {
             //task #2
 
         int[] cost = {30, 25, 29, 32, 33};
-        int minCost = 40;
+        int minCost = 10;
         for (final int current : cost) {
         if (current < minCost){
                 minCost = current;
