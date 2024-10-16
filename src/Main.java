@@ -1,53 +1,65 @@
 import javax.swing.*;
+import java.time.LocalDate;
 import java.util.Arrays;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
-
-            //task #1
-
-        int[] sumCost = {30, 25, 29, 32, 33};
-        int sum = 0;
-        for (int element : sumCost) {
-            sum = sum + element;
-        }
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
-
-            //task #2
-
-        int[] cost = {30, 25, 29, 32, 33};
-        int minCost = 40;
-        for (final int current : cost) {
-        if (current < minCost){
-                minCost = current;
-            }
-        }
-       System.out.println("Минимальная сумма трат за неделю составила " + minCost + " рублей.");
-
-        int maxCost = 0;
-        for (final int current : cost) {
-            if (current > maxCost) {
-                maxCost = current;
-            }
-        }
-        System.out.println("Максимальная сумма трат за неделю составила " + maxCost + " рублей.");
-
-            //task #3
-
-    int[] midCost = {30,43,44,35,37};
-    int sumMonth = 0;
-    for (int element : midCost){
-        sumMonth = sumMonth + element;
+        task1();
+        task2();
+        task3();
     }
-        float midSum = sumMonth / midCost.length;
-        System.out.println("Средняя сумма трат за месяц составила " + midSum + " рублей");
 
-            //task #4
-
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length -1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+    public static void calculateLeapYear(int year){
+        if ((year >= 1584) && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
+            System.out.println("Этот " + year + " год является високосным.");
+        } else {
+            System.out.println("Этот " + year + " год не является високосным.");
         }
+    }
 
+    public static void task1() {
+        int year = 2021;
+        calculateLeapYear(year);
+    }
+
+
+    public static void oS(int clientOS){
+        //int currentYear = 2000;
+        int currentYear = LocalDate.now().getYear();
+        if (clientOS == 1 && currentYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+        } else if (clientOS == 0 && currentYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        }
+        if (clientOS == 0 && currentYear >= 2015) {
+            System.out.println("Установите версию для iOS по ссылке.");
+        } else if (clientOS == 1 && currentYear >= 2015) {
+            System.out.println("Установите версию для Android по ссылке.");
+        }
+    }
+
+    public static void  task2() {
+        int clientOS = 0;
+        oS(clientOS);
+    }
+
+
+    public static void calculateDistanceAndTime (int deliveryDistance){
+        int deliveryDay = 1;
+        if (deliveryDistance > 20) {
+            deliveryDay++;
+            System.out.println("Потребуется дней: " + deliveryDay);
+        }  if (deliveryDistance >= 60 && deliveryDistance <= 100){
+            deliveryDay ++;
+            System.out.println("Потребуется дней: " + deliveryDay);
+        }else if(deliveryDistance > 100){
+            System.out.println("Доставки, на такое расстояние, не осущевляются.");
+        }return;
+    }
+
+
+    public static void task3(){
+        int deliveryDistance = 40;
+        calculateDistanceAndTime(deliveryDistance);
     }
 }
