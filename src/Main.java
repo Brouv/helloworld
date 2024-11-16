@@ -24,8 +24,8 @@ public class Main{
 
 
     public static void oS(int clientOS){
-        //int currentYear = 2000;
-        int currentYear = LocalDate.now().getYear();
+        int currentYear = 2016;
+        // int currentYear = LocalDate.now().getYear();
         if (clientOS == 1 && currentYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке.");
         } else if (clientOS == 0 && currentYear < 2015) {
@@ -46,6 +46,9 @@ public class Main{
 
     public static void calculateDistanceAndTime (int deliveryDistance){
         int deliveryDay = 1;
+        if (deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: " + deliveryDay);
+        }
         if (deliveryDistance > 20) {
             deliveryDay++;
             System.out.println("Потребуется дней: " + deliveryDay);
@@ -59,7 +62,7 @@ public class Main{
 
 
     public static void task3(){
-        int deliveryDistance = 40;
+        int deliveryDistance = 15;
         calculateDistanceAndTime(deliveryDistance);
     }
 }
