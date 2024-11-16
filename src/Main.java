@@ -49,7 +49,7 @@ public class Main{
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + deliveryDay);
         }
-        if (deliveryDistance > 20) {
+        if (deliveryDistance > 20 && deliveryDistance < 60) {
             deliveryDay++;
             System.out.println("Потребуется дней: " + deliveryDay);
         }  if (deliveryDistance >= 60 && deliveryDistance <= 100){
@@ -62,7 +62,7 @@ public class Main{
 
 
     public static void task3(){
-        int deliveryDistance = 15;
+        int deliveryDistance = 101;
         calculateDistanceAndTime(deliveryDistance);
     }
 }
