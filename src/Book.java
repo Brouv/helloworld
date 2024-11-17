@@ -1,10 +1,10 @@
 public class Book {
 
-    String nameBook;
-    String authorBook;
-    int releaseBook;
+    private final String nameBook;
+    private final Author authorBook;
+    private int releaseBook;
 
-        public Book(String nameBook, String authorBook, int releaseBook) {
+        public Book(String nameBook, Author authorBook, int releaseBook) {
             this.nameBook = nameBook;
             this.authorBook = authorBook;
             this.releaseBook = releaseBook;
@@ -14,7 +14,7 @@ public class Book {
             return this.nameBook;
     }
 
-    public String getAuthorBook() {
+    public Author getAuthorBook() {
         return this.authorBook;
     }
 
