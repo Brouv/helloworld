@@ -11,4 +11,9 @@ public record Author(String lastName, String name) {
     public  String getName(){
         return this.name;
     }
+
+    @Override
+    public String toString() {
+        return "Автор - " + this.name + " " + this.lastName + ".";
+    }
 }

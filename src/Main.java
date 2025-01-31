@@ -2,10 +2,10 @@ public class Main{
 
     public static void main(String[] args) {
         Author dmitriy = new Author("Глуховский", "Дмитрий");
-        System.out.println("Автор - " + dmitriy.getName() + " " + dmitriy.getLastName() + ".");
+        System.out.println(dmitriy);
 
         Author nikolas = new Author("Доменг", "Николя");
-        System.out.println("Автор - " + nikolas.getName() + " " + nikolas.getLastName() + ".");
+        System.out.println(nikolas);
 
         Book metro2033 = new Book("Метро 2033", dmitriy, 2010);
         System.out.println("Название книги - " + metro2033.getNameBook() + ". Автор - " + metro2033.getAuthorBook() + ". Выпуск книги - " + metro2033.getReleaseBook() + " год.");
