@@ -26,8 +26,7 @@ public class Book {
             this.releaseBook = releaseBook;
     }
 
-
-//    public String toString() {
-//        return
-//    }
+    public String toString() {
+       return "Название книги - " + this.nameBook + ". Автор - " + this.authorBook + " Выпуск книги - " + this.releaseBook + " год." ;
+   }
 }

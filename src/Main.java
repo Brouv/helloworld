@@ -8,10 +8,10 @@ public class Main{
         System.out.println(nikolas);
 
         Book metro2033 = new Book("Метро 2033", dmitriy, 2010);
-        System.out.println("Название книги - " + metro2033.getNameBook() + ". Автор - " + metro2033.getAuthorBook() + ". Выпуск книги - " + metro2033.getReleaseBook() + " год.");
+        System.out.println(metro2033);
 
         Book massEffect = new Book("Mass Effect. Восхождение к звёздам",nikolas, 2007);
-        System.out.println("Название книги - " + massEffect.getNameBook() + ". Автор - " + massEffect.getAuthorBook() + ". Выпуск книги - " + massEffect.getReleaseBook() + " год.");
+        System.out.println(massEffect);
         massEffect.setReleaseBook(2020);
         System.out.println("Год выпуска книги - Mass Effect. Восхождение к звёздам. - изменён на - " + massEffect.getReleaseBook());
 
