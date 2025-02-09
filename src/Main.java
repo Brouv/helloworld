@@ -1,23 +1,80 @@
-public class Main{
+public class Main {
+    private static Employee[] employees = new Employee[10]; // Хранилище для сотрудников
 
     public static void main(String[] args) {
-        Author dmitriy = new Author("Глуховский", "Дмитрий");
-        System.out.println(dmitriy);
+        // Создание сотрудников
+        employees[0] = new Employee("Иванов Иван Иванович", 1, 50000);
+        employees[1] = new Employee("Петров Петр Петрович", 2, 60000);
+        employees[2] = new Employee("Сидоров Сидор Сидорович", 3, 40000);
+        employees[3] = new Employee("Алексеев Алексей Алексеевич", 4, 70000);
+        employees[4] = new Employee("Марков Марк Маркович", 5, 30000);
 
-        Author nikolas = new Author("Доменг", "Николя");
-        System.out.println(nikolas);
+        printAllEmployees();
+        System.out.println("Сумма затрат на З/П: " + calculateTotalSalary());
+        System.out.println("Сотрудник с минимальной З/П: " + findMinSalaryEmployee());
+        System.out.println("Сотрудник с максимальной З/П: " + findMaxSalaryEmployee());
+        System.out.println("Среднее значение зарплат: " + calculateAverageSalary());
+        printEmployeeFullNames();
+    }
 
-        System.out.println(nikolas.equals(dmitriy));
+    private static void printAllEmployees() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee);
+            }
+        }
+    }
 
-        Book metro2033 = new Book("Метро 2033", dmitriy, 2010);
-        System.out.println(metro2033);
+    private static double calculateTotalSalary() {
+        double total = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                total += employee.getSalary();
+            }
+        }
+        return total;
+    }
 
-        Book massEffect = new Book("Mass Effect. Восхождение к звёздам",nikolas, 2007);
-        System.out.println(massEffect);
+    private static Employee findMinSalaryEmployee() {
+        Employee minSalaryEmployee = null;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                if (minSalaryEmployee == null || employee.getSalary() < minSalaryEmployee.getSalary()) {
+                    minSalaryEmployee = employee;
+                }
+            }
+        }
+        return minSalaryEmployee;
+    }
 
-        massEffect.setReleaseBook(2020);
-        System.out.println("Год выпуска книги - Mass Effect. Восхождение к звёздам. - изменён на - " + massEffect.getReleaseBook());
+    private static Employee findMaxSalaryEmployee() {
+        Employee maxSalaryEmployee = null;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                if (maxSalaryEmployee == null || employee.getSalary() > maxSalaryEmployee.getSalary()) {
+                    maxSalaryEmployee = employee;
+                }
+            }
+        }
+        return maxSalaryEmployee;
+    }
 
-        System.out.println(massEffect.equals(metro2033));
+    private static double calculateAverageSalary() {
+        double totalSalary = calculateTotalSalary();
+        int count = 0;
+        for (Employee employee : employees) {
+            if (employee != null) {
+                count++;
+            }
+        }
+        return count > 0 ? totalSalary / count : 0;
+    }
+
+    private static void printEmployeeFullNames() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee.getFullName());
+            }
+        }
     }
 }
